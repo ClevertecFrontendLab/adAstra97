@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Breadcrumb } from 'antd';
 import './Breadcrumbs.scss';
 
-export const Breadcrumbs = () => {
+export const Breadcrumbs: React.FC = () => {
     interface IBreadcrumbs {
         label: string;
         link: string;

@@ -4,7 +4,8 @@ import { Layout } from 'antd';
 import { SiderBox } from '@components/SiderBox';
 import { HeaderBox } from '@components/HeaderBox';
 import { MainCards, MainPreview } from '@components/MainContent';
-const { Footer, Content } = Layout;
+import { FooterBox } from '@components/FooterBox';
+const { Content } = Layout;
 
 export const MainPage: React.FC = () => (
     <Layout className='main-page'>
@@ -15,7 +16,7 @@ export const MainPage: React.FC = () => (
                 <MainPreview/>
                 <MainCards/>
             </Content>
-            <Footer>Footer</Footer>
+            <FooterBox/>
         </Layout>
     </Layout>
 );

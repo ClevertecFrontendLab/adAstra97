@@ -1,7 +1,7 @@
 import { Typography } from 'antd';
 import './MainPreview.scss';
 
-export const MainPreview = () => (
+export const MainPreview: React.FC = () => (
     <>
         <Typography.Paragraph className='preview'>
             С CleverFit ты сможешь: <br />— планировать свои тренировки на календаре, выбирая тип и

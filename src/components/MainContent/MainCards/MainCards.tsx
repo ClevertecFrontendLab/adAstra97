@@ -34,7 +34,7 @@ export const MainCards: React.FC = () => {
         <div className='cards'>
             {cards.map((card, index) => (
                 <Card key={index} title={card.title} bordered={false}>
-                    <Button>
+                    <Button type='link'>
                         {card.icon}
                         <span>{card.subtitle}</span>
                     </Button>
