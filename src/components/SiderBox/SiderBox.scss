@@ -1,0 +1,136 @@
+.sider-box {
+    &.fixed {
+        position: fixed;
+        z-index: 100;
+    }
+
+    &__inner {
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+        z-index: 1;
+        position: relative;
+    }
+}
+
+.sider.ant-layout-sider {
+    background-color: var(--character-light-sider-background);
+    min-height: 100vh;
+}
+
+.switcher {
+    width: 20px;
+    height: 66px;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--character-light-sider-background);
+    clip-path: polygon(0 0, 100% 15%, 100% 85%, 0% 100%);
+
+    &.mobile {
+        top: 48px;
+        width: 32px;
+        height: 48px;
+        right: -30px;
+    }
+
+    svg {
+        fill: var(--neutral-gray-7);
+    }
+}
+
+.logo {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 48px;
+
+    @media (max-width: 451px) {
+        min-height: 50px;
+        margin-bottom: 12px;
+    }
+
+    &.mobile {
+        min-height: 50px;
+    }
+
+    svg {
+        cursor: pointer;
+    }
+}
+
+.ant-menu-item {
+    &.mobile {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    svg {
+        path {
+            transition: fill 0.3s;
+        }
+    }
+
+    &.calendar {
+        svg {
+            path {
+                fill: var(--primary-light-9);
+            }
+        }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .ant-menu.ant-menu-light &:hover {
+            color: var(--primary-light-5);
+
+            svg {
+                path {
+                    fill: var(--primary-light-5);
+                }
+            }
+        }
+    }
+
+    .ant-menu:not(.ant-menu-horizontal) &.ant-menu-item-selected {
+        background-color: var(--primary-light-1);
+
+        svg {
+            path {
+                fill: var(--primary-light-5);
+            }
+        }
+    }
+
+    .ant-layout-sider-children .ant-menu &:not(:last-child) {
+        margin-bottom: 18px;
+
+        @media (max-width: 451px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .ant-layout-sider-children .ant-menu &::after {
+        border-right-color: var(--primary-light-5);
+    }
+
+    .ant-menu &-selected {
+        color: var(--primary-light-5);
+    }
+
+    &.exit {
+        position: absolute !important;
+        bottom: 0;
+        width: 100%;
+        box-shadow: inset 0 1px 0 0 var(--character-light-dividers);
+        gap: 15px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.hidden-item {
+    opacity: 0;
+}

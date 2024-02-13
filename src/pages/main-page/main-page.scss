@@ -1,0 +1,19 @@
+.ant-layout.main-page {
+    max-width: 1440px;
+    margin: auto;
+    min-height: 100vh;
+    background: no-repeat center/cover url('@public/images/main-page-light.png');
+
+    &__layout {
+        position: relative;
+        background: transparent;
+    }
+
+    & .main-page__content {
+        margin: 24px;
+
+        @media (max-width: 451px) {
+            margin: 24px 16px;
+        }
+    }
+}
