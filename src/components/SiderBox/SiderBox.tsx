@@ -165,6 +165,7 @@ export const SiderBox: React.FC = () => {
                 {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
                     className: `switcher ${isMobileScreen ? 'mobile' : ''}`,
                     onClick: () => setCollapsed(!collapsed),
+                    'data-test-id': `sider-switch${isMobileScreen? '-mobile' : ''}`,
                 })}
             </div>
         </div>
