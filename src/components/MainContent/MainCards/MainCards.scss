@@ -5,6 +5,10 @@
   justify-content: space-between;
   gap: 16px;
 
+  @media (max-width: 650px) {
+    gap: 8px;
+  }
+
   div.ant-card {
     flex: 1;
     min-width: 180px;
@@ -32,13 +36,6 @@
 
     .ant-card-head-title {
       padding: 12px 0;
-
-      @media (max-width: 971px) {
-        text-align: left;
-      }
-      @media (max-width: 830px) {
-        text-align: center;
-      }
     }
   }
 

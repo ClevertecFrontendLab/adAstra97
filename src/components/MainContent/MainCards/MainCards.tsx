@@ -12,19 +12,19 @@ interface ICard {
 const cards: ICard[] = [
     {
         title: 'Расписать тренировки',
-        icon: <HeartFilled style={{ color: 'var(--primary-light-6)', fontSize: '10px' }} />,
+        icon: <HeartFilled style={{ color: 'var(--primary-light-6)', fontSize: '12.5px' }} />,
         subtitle: 'Тренировки',
     },
     {
         title: 'Назначить календарь',
         icon: (
-            <CalendarTwoTone twoToneColor='var(--primary-light-6)' style={{ fontSize: '10px' }} />
+            <CalendarTwoTone twoToneColor='var(--primary-light-6)' style={{ fontSize: '12.5px' }} />
         ),
         subtitle: 'Календарь',
     },
     {
         title: 'Заполнить профиль',
-        icon: <IdcardOutlined style={{ color: 'var(--primary-light-6)', fontSize: '10px' }} />,
+        icon: <IdcardOutlined style={{ color: 'var(--primary-light-6)', fontSize: '12.5px' }} />,
         subtitle: 'Профиль',
     },
 ];

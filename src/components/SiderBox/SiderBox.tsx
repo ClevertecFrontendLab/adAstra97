@@ -24,7 +24,7 @@ export const SiderBox: React.FC = () => {
     const changeBreakpoints = (broken: boolean) => {
         if (broken) {
             setMobileScreen(true);
-            setWidthSider(0);
+            setWidthSider(1);
         } else {
             setMobileScreen(false);
             setWidthSider(64);
@@ -165,7 +165,7 @@ export const SiderBox: React.FC = () => {
                 {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
                     className: `switcher ${isMobileScreen ? 'mobile' : ''}`,
                     onClick: () => setCollapsed(!collapsed),
-                    'data-test-id': `sider-switch${isMobileScreen? '-mobile' : ''}`,
+                    'data-test-id': `sider-switch${isMobileScreen ? '-mobile' : ''}`,
                 })}
             </div>
         </div>
