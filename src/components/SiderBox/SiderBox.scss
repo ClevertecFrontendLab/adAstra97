@@ -5,6 +5,8 @@
     }
 
     &__inner {
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+        z-index: 21;
         position: relative;
     }
 }
@@ -18,7 +20,7 @@
     width: 20px;
     height: 66px;
     position: absolute;
-    right: -18px;
+    right: -20px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 20;
@@ -46,6 +48,11 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 48px;
+
+    @media (max-width: 451px) {
+        min-height: 50px;
+        margin-bottom: 12px;
+    }
 
     &.mobile {
         min-height: 50px;
@@ -76,15 +83,15 @@
     }
 
     @media (hover: hover) and (pointer: fine) {
-            .ant-menu.ant-menu-light &:hover {
-        color: var(--primary-light-5);
+        .ant-menu.ant-menu-light &:hover {
+            color: var(--primary-light-5);
 
-        svg {
-            path {
-                fill: var(--primary-light-5);
+            svg {
+                path {
+                    fill: var(--primary-light-5);
+                }
             }
         }
-    }
     }
 
     .ant-menu:not(.ant-menu-horizontal) &.ant-menu-item-selected {
@@ -99,6 +106,10 @@
 
     .ant-layout-sider-children .ant-menu &:not(:last-child) {
         margin-bottom: 18px;
+
+        @media (max-width: 451px) {
+            margin-bottom: 10px;
+        }
     }
 
     .ant-layout-sider-children .ant-menu &::after {
