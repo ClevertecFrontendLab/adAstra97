@@ -35,7 +35,7 @@ export const SiderBox: React.FC = () => {
         <div className={`sider-box ${isMobileScreen ? 'fixed' : ''}`}>
             <div className='sider-box__inner'>
                 <Sider
-                    breakpoint='xs'
+                    breakpoint='sm'
                     onBreakpoint={(broken) => changeBreakpoints(broken)}
                     trigger={null}
                     collapsible
@@ -45,11 +45,15 @@ export const SiderBox: React.FC = () => {
                     collapsedWidth={widthSider}
                     style={{ paddingTop: `${isMobileScreen ? '0' : '30px'}` }}
                 >
-                    <div className={`logo ${isMobileScreen && !collapsed ? 'hidden-item mobile' : ''}`}>
-                        {collapsed ? (
-                            <LogoShort />
-                        ) : isMobileScreen ? (
+                    <div
+                        className={`logo ${
+                            isMobileScreen && !collapsed ? 'hidden-item mobile' : ''
+                        }`}
+                    >
+                        {isMobileScreen && collapsed ? (
                             <Logo width={72} />
+                        ) : collapsed ? (
+                            <LogoShort />
                         ) : (
                             <Logo />
                         )}
@@ -66,36 +70,60 @@ export const SiderBox: React.FC = () => {
                                 ) : (
                                     <CalendarTwoTone
                                         twoToneColor='#061178'
-                                        style={{ fontSize: '16px' }}
+                                        style={{
+                                            fontSize: '16px',
+                                            marginLeft: `${collapsed ? '8px' : '0'}`,
+                                        }}
                                     />
                                 ),
                                 label: 'Календарь',
                                 className: `calendar ${
                                     isMobileScreen && !collapsed ? 'hidden-item' : ''
                                 }`,
-                                style: { paddingLeft: `${isMobileScreen ? '8px' : '24px'}` },
+                                style: {
+                                    paddingLeft: `${isMobileScreen ? '8px' : '16px'}`,
+                                    paddingRight: `${isMobileScreen ? '8px' : '16px'}`,
+                                },
                             },
                             {
                                 key: '2',
                                 icon: isMobileScreen ? (
                                     ''
                                 ) : (
-                                    <HeartFilled style={{ color: '#061178', fontSize: '16px' }} />
+                                    <HeartFilled
+                                        style={{
+                                            color: '#061178',
+                                            fontSize: '16px',
+                                            marginLeft: `${collapsed ? '8px' : '0'}`,
+                                        }}
+                                    />
                                 ),
                                 label: 'Тренировки',
                                 className: `${isMobileScreen && !collapsed ? 'hidden-item' : ''}`,
-                                style: { paddingLeft: `${isMobileScreen ? '8px' : '24px'}` },
+                                style: {
+                                    paddingLeft: `${isMobileScreen ? '8px' : '16px'}`,
+                                    paddingRight: `${isMobileScreen ? '8px' : '16px'}`,
+                                },
                             },
                             {
                                 key: '3',
                                 icon: isMobileScreen ? (
                                     ''
                                 ) : (
-                                    <TrophyFilled style={{ color: '#061178', fontSize: '16px' }} />
+                                    <TrophyFilled
+                                        style={{
+                                            color: '#061178',
+                                            fontSize: '16px',
+                                            marginLeft: `${collapsed ? '8px' : '0'}`,
+                                        }}
+                                    />
                                 ),
                                 label: 'Достижения',
                                 className: `${isMobileScreen && !collapsed ? 'hidden-item' : ''}`,
-                                style: { paddingLeft: `${isMobileScreen ? '8px' : '24px'}` },
+                                style: {
+                                    paddingLeft: `${isMobileScreen ? '8px' : '16px'}`,
+                                    paddingRight: `${isMobileScreen ? '8px' : '16px'}`,
+                                },
                             },
                             {
                                 key: '4',
@@ -103,12 +131,19 @@ export const SiderBox: React.FC = () => {
                                     ''
                                 ) : (
                                     <IdcardOutlined
-                                        style={{ color: '#061178', fontSize: '16px' }}
+                                        style={{
+                                            color: '#061178',
+                                            fontSize: '16px',
+                                            marginLeft: `${collapsed ? '8px' : '0'}`,
+                                        }}
                                     />
                                 ),
                                 label: 'Профиль',
                                 className: `${isMobileScreen && !collapsed ? 'hidden-item' : ''}`,
-                                style: { paddingLeft: `${isMobileScreen ? '8px' : '24px'}` },
+                                style: {
+                                    paddingLeft: `${isMobileScreen ? '8px' : '16px'}`,
+                                    paddingRight: `${isMobileScreen ? '8px' : '16px'}`,
+                                },
                             },
                             {
                                 key: '5',
@@ -116,7 +151,8 @@ export const SiderBox: React.FC = () => {
                                 label: 'Выход',
                                 style: {
                                     zIndex: `${isMobileScreen && !collapsed ? '-1' : '1'}`,
-                                    paddingLeft: `${isMobileScreen ? '8px' : '24px'}`,
+                                    paddingLeft: `${isMobileScreen ? '8px' : '16px'}`,
+                                    paddingRight: `${isMobileScreen ? '8px' : '16px'}`,
                                     textAlign: `${isMobileScreen ? 'center' : 'left'}`,
                                 },
                                 className: `exit ${

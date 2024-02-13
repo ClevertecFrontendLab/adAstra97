@@ -29,7 +29,7 @@
     clip-path: polygon(0 0, 100% 15%, 100% 85%, 0% 100%);
 
     &.mobile {
-        top: 72px;
+        top: 48px;
         width: 32px;
         height: 48px;
         right: -30px;
@@ -45,7 +45,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
 
     &.mobile {
         min-height: 50px;
@@ -57,6 +57,10 @@
 }
 
 .ant-menu-item {
+    &.mobile {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
     svg {
         path {
             transition: fill 0.3s;
@@ -71,7 +75,8 @@
         }
     }
 
-    .ant-menu.ant-menu-light &:hover {
+    @media (hover: hover) and (pointer: fine) {
+            .ant-menu.ant-menu-light &:hover {
         color: var(--primary-light-5);
 
         svg {
@@ -79,6 +84,7 @@
                 fill: var(--primary-light-5);
             }
         }
+    }
     }
 
     .ant-menu:not(.ant-menu-horizontal) &.ant-menu-item-selected {
@@ -91,7 +97,11 @@
         }
     }
 
-    .ant-menu.ant-menu-inline &::after {
+    .ant-layout-sider-children .ant-menu &:not(:last-child) {
+        margin-bottom: 18px;
+    }
+
+    .ant-layout-sider-children .ant-menu &::after {
         border-right-color: var(--primary-light-5);
     }
 
